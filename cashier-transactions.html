@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cashier Transactions</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">C</div>
+          <div>
+            <h1>Local Market</h1>
+            <p>POS Terminal</p>
+          </div>
+        </div>
+
+        <nav class="nav-panel">
+          <a class="nav-item" href="cashier.html"><span class="dot cashier"></span>POS</a>
+          <a class="nav-item active" href="cashier-transactions.html"><span class="dot cashier"></span>Transactions</a>
+          <a class="nav-item" href="cashier-scanner.html"><span class="dot cashier"></span>Scanner</a>
+          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+        </nav>
+
+        <div class="help-box">
+          <h3>Help Desk</h3>
+          <p>Transaction history and POS support.</p>
+          <button>Call Support</button>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Transaction Logs</p>
+            <h2>Cashier Transactions</h2>
+          </div>
+          <div class="topbar-actions">
+            <button class="primary-btn">Print Receipt</button>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <div class="panel full">
+            <div class="panel-header">
+              <h3>Recent Sales</h3>
+              <span class="pill neutral">Today</span>
+            </div>
+            <table class="inventory-table">
+              <thead>
+                <tr>
+                  <th>Receipt</th>
+                  <th>Items</th>
+                  <th>Amount</th>
+                  <th>Method</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>#3021</td><td>4 items</td><td>$22.15</td><td>Cash</td></tr>
+                <tr><td>#3020</td><td>6 items</td><td>$34.40</td><td>GCash</td></tr>
+                <tr><td>#3019</td><td>3 items</td><td>$18.55</td><td>Card</td></tr>
+                <tr><td>#3018</td><td>5 items</td><td>$28.90</td><td>Cash</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

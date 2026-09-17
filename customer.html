@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">C</div>
+          <div>
+            <h1>Local Market</h1>
+            <p>Customer Portal</p>
+          </div>
+        </div>
+
+        <nav class="nav-panel">
+          <a class="nav-item active" href="customer.html"><span class="dot customer"></span>Home</a>
+          <a class="nav-item" href="customer-orders.html"><span class="dot customer"></span>Orders</a>
+          <a class="nav-item" href="customer-loyalty.html"><span class="dot customer"></span>Loyalty</a>
+          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+        </nav>
+
+        <div class="help-box">
+          <h3>Customer Support</h3>
+          <p>Track orders, rewards, and store promotions.</p>
+          <button>Contact Us</button>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Customer access</p>
+            <h2>Customer Portal</h2>
+          </div>
+          <div class="topbar-actions">
+            <div class="search-box">
+              <span>⌕</span>
+              <input type="text" placeholder="Search products" />
+            </div>
+            <button class="primary-btn">Order Now</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <div class="stat-card"><div class="stat-label">Loyalty Points</div><div class="stat-value">8,440</div><span class="stat-trend">+320</span></div>
+          <div class="stat-card"><div class="stat-label">Saved Orders</div><div class="stat-value">34</div><span class="stat-trend">+6</span></div>
+          <div class="stat-card"><div class="stat-label">Reservations</div><div class="stat-value">12</div><span class="stat-trend">+3</span></div>
+          <div class="stat-card"><div class="stat-label">Redeemed</div><div class="stat-value">522</div><span class="stat-trend">+18%</span></div>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel large">
+            <div class="panel-header">
+              <h3>Featured Products</h3>
+              <span class="pill success">Trending</span>
+            </div>
+            <div class="feature-grid customer-products">
+              <div class="feature-card"><div class="feature-icon">🥤</div><h4>Organic Juice</h4><p>$5.50</p></div>
+              <div class="feature-card"><div class="feature-icon">🍞</div><h4>Fresh Bread</h4><p>$4.20</p></div>
+              <div class="feature-card"><div class="feature-icon">☕</div><h4>Coffee Mix</h4><p>$8.40</p></div>
+              <div class="feature-card"><div class="feature-icon">🥗</div><h4>Snack Combo</h4><p>$14.90</p></div>
+              <div class="feature-card"><div class="feature-icon">🍋</div><h4>Fruit Pack</h4><p>$6.70</p></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Promotions</h3>
+              <span class="pill warning">Live</span>
+            </div>
+            <ul class="alerts-list">
+              <li><div class="alert-left"><span class="alert-icon warning"></span><div><strong>20% off</strong><small>Snack packs are on promo</small></div></div><small>2 hrs ago</small></li>
+              <li><div class="alert-left"><span class="alert-icon success"></span><div><strong>Welcome reward</strong><small>You earned 200 points this week</small></div></div><small>Today</small></li>
+              <li><div class="alert-left"><span class="alert-icon success"></span><div><strong>Order ready</strong><small>Your pickup order is prepared</small></div></div><small>Today</small></li>
+            </ul>
+          </div>
+
+          <div class="panel large">
+            <div class="panel-header">
+              <h3>Recent Orders</h3>
+              <span class="pill neutral">History</span>
+            </div>
+            <table class="inventory-table">
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Items</th>
+                  <th>Status</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Order #012</td><td>5 items</td><td><span class="status-tag good">Ready</span></td><td>$18.50</td></tr>
+                <tr><td>Order #011</td><td>3 items</td><td><span class="status-tag warn">In transit</span></td><td>$12.90</td></tr>
+                <tr><td>Order #010</td><td>7 items</td><td><span class="status-tag good">Delivered</span></td><td>$27.40</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Loyalty</h3>
+              <span class="pill neutral">Rewards</span>
+            </div>
+            <div class="transactions">
+              <div class="transaction-item"><div><strong>Loyalty reward</strong><small>Earned points</small></div><div class="transaction-amount">200 pts</div></div>
+              <div class="transaction-item"><div><strong>Pickup order</strong><small>Redeem items</small></div><div class="transaction-amount">$18.50</div></div>
+              <div class="transaction-item"><div><strong>Reservation</strong><small>Saved cart</small></div><div class="transaction-amount">2 items</div></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

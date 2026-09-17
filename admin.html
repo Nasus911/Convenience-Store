@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">C</div>
+          <div>
+            <h1>Local Market</h1>
+            <p>Admin Console</p>
+          </div>
+        </div>
+
+        <nav class="nav-panel">
+          <a class="nav-item active" href="admin.html"><span class="dot admin"></span>Dashboard</a>
+          <a class="nav-item" href="admin-accounts.html"><span class="dot admin"></span>Accounts</a>
+          <a class="nav-item" href="admin-analytics.html"><span class="dot admin"></span>Analytics</a>
+          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+        </nav>
+
+        <div class="help-box">
+          <h3>Help Desk</h3>
+          <p>On-site support available for store operations.</p>
+          <button>Contact Support</button>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Admin access</p>
+            <h2>Admin Dashboard</h2>
+          </div>
+          <div class="topbar-actions">
+            <div class="search-box">
+              <span>⌕</span>
+              <input type="text" placeholder="Search account or report" />
+            </div>
+            <button class="primary-btn">Create Admin</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <div class="stat-card"><div class="stat-label">Total Sales</div><div class="stat-value">$84.2K</div><span class="stat-trend">+12.4%</span></div>
+          <div class="stat-card"><div class="stat-label">Inventory</div><div class="stat-value">94%</div><span class="stat-trend">+3.1%</span></div>
+          <div class="stat-card"><div class="stat-label">Active Cashiers</div><div class="stat-value">18</div><span class="stat-trend">+2</span></div>
+          <div class="stat-card"><div class="stat-label">Net Profit</div><div class="stat-value">$21.7K</div><span class="stat-trend">+8.6%</span></div>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel large">
+            <div class="panel-header">
+              <h3>Sales Analytics</h3>
+              <span class="pill success">This week</span>
+            </div>
+            <div class="chart-wrap">
+              <div class="bars">
+                <div class="bar-col"><div class="bar" style="height: 42%"></div><span class="bar-label">M</span></div>
+                <div class="bar-col"><div class="bar" style="height: 68%"></div><span class="bar-label">T</span></div>
+                <div class="bar-col"><div class="bar" style="height: 54%"></div><span class="bar-label">W</span></div>
+                <div class="bar-col"><div class="bar" style="height: 78%"></div><span class="bar-label">T</span></div>
+                <div class="bar-col"><div class="bar" style="height: 61%"></div><span class="bar-label">F</span></div>
+                <div class="bar-col"><div class="bar" style="height: 85%"></div><span class="bar-label">S</span></div>
+                <div class="bar-col"><div class="bar" style="height: 96%"></div><span class="bar-label">S</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Operational Alerts</h3>
+              <span class="pill warning">Live</span>
+            </div>
+            <ul class="alerts-list">
+              <li><div class="alert-left"><span class="alert-icon warning"></span><div><strong>Low stock</strong><small>Milk and bread below threshold</small></div></div><small>12 min ago</small></li>
+              <li><div class="alert-left"><span class="alert-icon danger"></span><div><strong>Expiry alert</strong><small>8 products near expiry date</small></div></div><small>30 min ago</small></li>
+              <li><div class="alert-left"><span class="alert-icon success"></span><div><strong>Branch synced</strong><small>All stores updated successfully</small></div></div><small>1 hr ago</small></li>
+            </ul>
+          </div>
+
+          <div class="panel large">
+            <div class="panel-header">
+              <h3>Inventory Status</h3>
+              <span class="pill info">Auto-updated</span>
+            </div>
+            <table class="inventory-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Category</th>
+                  <th>Qty</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Coconut Water</td><td>Beverage</td><td>120</td><td><span class="status-tag good">Good</span></td></tr>
+                <tr><td>Rice Pack</td><td>Groceries</td><td>72</td><td><span class="status-tag warn">Warn</span></td></tr>
+                <tr><td>Fresh Milk</td><td>Dairy</td><td>36</td><td><span class="status-tag low">Low</span></td></tr>
+                <tr><td>Instant Soup</td><td>Groceries</td><td>90</td><td><span class="status-tag good">Good</span></td></tr>
+                <tr><td>Toothpaste</td><td>Essentials</td><td>44</td><td><span class="status-tag warn">Warn</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Recent Transactions</h3>
+              <span class="pill neutral">Today</span>
+            </div>
+            <div class="transactions">
+              <div class="transaction-item"><div><strong>Cashier 03</strong><small>Processed today</small></div><div class="transaction-amount">$412.10</div></div>
+              <div class="transaction-item"><div><strong>Cashier 07</strong><small>Processed today</small></div><div class="transaction-amount">$298.40</div></div>
+              <div class="transaction-item"><div><strong>Cashier 11</strong><small>Processed today</small></div><div class="transaction-amount">$614.25</div></div>
+            </div>
+          </div>
+
+          <div class="panel full">
+            <div class="panel-header">
+              <h3>System Features</h3>
+              <span class="pill neutral">SRS Coverage</span>
+            </div>
+            <div class="feature-grid">
+              <div class="feature-card"><div class="feature-icon">📊</div><h4>Sales Dashboard</h4><p>Analytics and KPIs for branch performance.</p></div>
+              <div class="feature-card"><div class="feature-icon">📦</div><h4>Inventory Control</h4><p>Threshold alerts and stock restock suggestions.</p></div>
+              <div class="feature-card"><div class="feature-icon">🔒</div><h4>Role Security</h4><p>Admin-only access to reports and accounts.</p></div>
+              <div class="feature-card"><div class="feature-icon">🏬</div><h4>Multi-Branch</h4><p>Manage multiple store locations in one dashboard.</p></div>
+              <div class="feature-card"><div class="feature-icon">🧾</div><h4>Audit Trails</h4><p>Track transaction logs and cashier activity.</p></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

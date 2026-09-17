@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manager Sales</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">C</div>
+          <div>
+            <h1>Local Market</h1>
+            <p>Manager Panel</p>
+          </div>
+        </div>
+
+        <nav class="nav-panel">
+          <a class="nav-item" href="manager.html"><span class="dot manager"></span>Dashboard</a>
+          <a class="nav-item active" href="manager-sales.html"><span class="dot manager"></span>Sales</a>
+          <a class="nav-item" href="manager-promotions.html"><span class="dot manager"></span>Promos</a>
+          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+        </nav>
+
+        <div class="help-box">
+          <h3>Help Desk</h3>
+          <p>Manager support coverage and sales reports.</p>
+          <button>Contact Support</button>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Sales Management</p>
+            <h2>Sales Dashboard</h2>
+          </div>
+          <div class="topbar-actions">
+            <button class="primary-btn">Generate Report</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <div class="stat-card"><div class="stat-label">Daily Sales</div><div class="stat-value">$12.3K</div><span class="stat-trend">+9.4%</span></div>
+          <div class="stat-card"><div class="stat-label">Gross Margin</div><div class="stat-value">27.1%</div><span class="stat-trend">+1.8%</span></div>
+          <div class="stat-card"><div class="stat-label">Avg Basket</div><div class="stat-value">$29.40</div><span class="stat-trend">+6.8%</span></div>
+          <div class="stat-card"><div class="stat-label">Sales Goal</div><div class="stat-value">91%</div><span class="stat-trend">+4.2%</span></div>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel large">
+            <div class="panel-header">
+              <h3>Weekly Sales</h3>
+              <span class="pill success">Updated</span>
+            </div>
+            <div class="chart-wrap">
+              <div class="bars">
+                <div class="bar-col"><div class="bar" style="height: 39%"></div><span class="bar-label">M</span></div>
+                <div class="bar-col"><div class="bar" style="height: 52%"></div><span class="bar-label">T</span></div>
+                <div class="bar-col"><div class="bar" style="height: 61%"></div><span class="bar-label">W</span></div>
+                <div class="bar-col"><div class="bar" style="height: 72%"></div><span class="bar-label">T</span></div>
+                <div class="bar-col"><div class="bar" style="height: 68%"></div><span class="bar-label">F</span></div>
+                <div class="bar-col"><div class="bar" style="height: 80%"></div><span class="bar-label">S</span></div>
+                <div class="bar-col"><div class="bar" style="height: 86%"></div><span class="bar-label">S</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Sales Alerts</h3>
+              <span class="pill warning">Live</span>
+            </div>
+            <ul class="alerts-list">
+              <li><div class="alert-left"><span class="alert-icon warning"></span><div><strong>Slow period</strong><small>Wednesday sales dipped 8%</small></div></div><small>1 hr ago</small></li>
+              <li><div class="alert-left"><span class="alert-icon success"></span><div><strong>Promo working</strong><small>Snack combo sales increased 15%</small></div></div><small>3 hrs ago</small></li>
+              <li><div class="alert-left"><span class="alert-icon danger"></span><div><strong>Refund spike</strong><small>Refunds above expected threshold</small></div></div><small>6 hrs ago</small></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

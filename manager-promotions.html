@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manager Promotions</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">C</div>
+          <div>
+            <h1>Local Market</h1>
+            <p>Manager Panel</p>
+          </div>
+        </div>
+
+        <nav class="nav-panel">
+          <a class="nav-item" href="manager.html"><span class="dot manager"></span>Dashboard</a>
+          <a class="nav-item" href="manager-sales.html"><span class="dot manager"></span>Sales</a>
+          <a class="nav-item active" href="manager-promotions.html"><span class="dot manager"></span>Promos</a>
+          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+        </nav>
+
+        <div class="help-box">
+          <h3>Help Desk</h3>
+          <p>Promotion campaign review and approval support.</p>
+          <button>Contact Support</button>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Promotions</p>
+            <h2>Promotion Approval</h2>
+          </div>
+          <div class="topbar-actions">
+            <button class="primary-btn">New Promo</button>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <div class="panel full">
+            <div class="panel-header">
+              <h3>Active Campaigns</h3>
+              <span class="pill success">3 active</span>
+            </div>
+            <table class="inventory-table">
+              <thead>
+                <tr>
+                  <th>Campaign</th>
+                  <th>Discount</th>
+                  <th>Status</th>
+                  <th>Start</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Snack Pack Deal</td><td>20%</td><td><span class="status-tag good">Approved</span></td><td>Aug 5</td></tr>
+                <tr><td>Family Bundle</td><td>15%</td><td><span class="status-tag warn">Pending</span></td><td>Aug 8</td></tr>
+                <tr><td>Weekend Sale</td><td>10%</td><td><span class="status-tag good">Approved</span></td><td>Aug 10</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

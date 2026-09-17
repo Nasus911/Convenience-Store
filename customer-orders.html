@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Orders</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">C</div>
+          <div>
+            <h1>Local Market</h1>
+            <p>Customer Portal</p>
+          </div>
+        </div>
+
+        <nav class="nav-panel">
+          <a class="nav-item" href="customer.html"><span class="dot customer"></span>Home</a>
+          <a class="nav-item active" href="customer-orders.html"><span class="dot customer"></span>Orders</a>
+          <a class="nav-item" href="customer-loyalty.html"><span class="dot customer"></span>Loyalty</a>
+          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+        </nav>
+
+        <div class="help-box">
+          <h3>Customer Support</h3>
+          <p>Order tracking and customer assistance.</p>
+          <button>Contact Us</button>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Orders</p>
+            <h2>My Orders</h2>
+          </div>
+          <div class="topbar-actions">
+            <button class="primary-btn">Place New Order</button>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <div class="panel full">
+            <div class="panel-header">
+              <h3>Order History</h3>
+              <span class="pill neutral">Recent</span>
+            </div>
+            <table class="inventory-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Items</th>
+                  <th>Status</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>#012</td><td>5 items</td><td><span class="status-tag good">Ready</span></td><td>$18.50</td></tr>
+                <tr><td>#011</td><td>3 items</td><td><span class="status-tag warn">In transit</span></td><td>$12.90</td></tr>
+                <tr><td>#010</td><td>7 items</td><td><span class="status-tag good">Delivered</span></td><td>$27.40</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

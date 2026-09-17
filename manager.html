@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manager Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">C</div>
+          <div>
+            <h1>Local Market</h1>
+            <p>Manager Panel</p>
+          </div>
+        </div>
+
+        <nav class="nav-panel">
+          <a class="nav-item active" href="manager.html"><span class="dot manager"></span>Dashboard</a>
+          <a class="nav-item" href="manager-sales.html"><span class="dot manager"></span>Sales</a>
+          <a class="nav-item" href="manager-promotions.html"><span class="dot manager"></span>Promos</a>
+          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+        </nav>
+
+        <div class="help-box">
+          <h3>Help Desk</h3>
+          <p>Operational support and escalation available.</p>
+          <button>Contact Support</button>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Manager access</p>
+            <h2>Manager Dashboard</h2>
+          </div>
+          <div class="topbar-actions">
+            <div class="search-box">
+              <span>⌕</span>
+              <input type="text" placeholder="Search sales or alerts" />
+            </div>
+            <button class="primary-btn">Approve Promo</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <div class="stat-card"><div class="stat-label">Supervisor Alerts</div><div class="stat-value">14</div><span class="stat-trend">+4</span></div>
+          <div class="stat-card"><div class="stat-label">Promo Approvals</div><div class="stat-value">6</div><span class="stat-trend">+2</span></div>
+          <div class="stat-card"><div class="stat-label">Low Stock</div><div class="stat-value">11</div><span class="stat-trend">-3</span></div>
+          <div class="stat-card"><div class="stat-label">Cashier Score</div><div class="stat-value">92%</div><span class="stat-trend">+5%</span></div>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel large">
+            <div class="panel-header">
+              <h3>Sales Overview</h3>
+              <span class="pill success">This month</span>
+            </div>
+            <div class="chart-wrap">
+              <div class="bars">
+                <div class="bar-col"><div class="bar" style="height: 34%"></div><span class="bar-label">M</span></div>
+                <div class="bar-col"><div class="bar" style="height: 46%"></div><span class="bar-label">T</span></div>
+                <div class="bar-col"><div class="bar" style="height: 52%"></div><span class="bar-label">W</span></div>
+                <div class="bar-col"><div class="bar" style="height: 63%"></div><span class="bar-label">T</span></div>
+                <div class="bar-col"><div class="bar" style="height: 58%"></div><span class="bar-label">F</span></div>
+                <div class="bar-col"><div class="bar" style="height: 70%"></div><span class="bar-label">S</span></div>
+                <div class="bar-col"><div class="bar" style="height: 76%"></div><span class="bar-label">S</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Operational Alerts</h3>
+              <span class="pill warning">Live</span>
+            </div>
+            <ul class="alerts-list">
+              <li><div class="alert-left"><span class="alert-icon warning"></span><div><strong>Promo review</strong><small>Three discounts waiting for approval</small></div></div><small>10 min ago</small></li>
+              <li><div class="alert-left"><span class="alert-icon danger"></span><div><strong>Critical stock</strong><small>Rice and canned goods below threshold</small></div></div><small>25 min ago</small></li>
+              <li><div class="alert-left"><span class="alert-icon success"></span><div><strong>Shift update</strong><small>All staff tasks are on schedule</small></div></div><small>1 hr ago</small></li>
+            </ul>
+          </div>
+
+          <div class="panel large">
+            <div class="panel-header">
+              <h3>Inventory Alerts</h3>
+              <span class="pill info">Threshold</span>
+            </div>
+            <table class="inventory-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Category</th>
+                  <th>Qty</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Rice Pack</td><td>Groceries</td><td>28</td><td><span class="status-tag low">Low</span></td></tr>
+                <tr><td>Instant Noodles</td><td>Snacks</td><td>184</td><td><span class="status-tag good">Good</span></td></tr>
+                <tr><td>Canned Tuna</td><td>Groceries</td><td>52</td><td><span class="status-tag warn">Warn</span></td></tr>
+                <tr><td>Soap</td><td>Essentials</td><td>67</td><td><span class="status-tag good">Good</span></td></tr>
+                <tr><td>Coffee Beans</td><td>Beverage</td><td>18</td><td><span class="status-tag low">Low</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Cashier Monitoring</h3>
+              <span class="pill neutral">Today</span>
+            </div>
+            <div class="transactions">
+              <div class="transaction-item"><div><strong>Shift Summary</strong><small>18 logs</small></div><div class="transaction-amount">Reviewed</div></div>
+              <div class="transaction-item"><div><strong>Cashier 04</strong><small>92% score</small></div><div class="transaction-amount">Good</div></div>
+              <div class="transaction-item"><div><strong>Promotions</strong><small>5 pending</small></div><div class="transaction-amount">4/5</div></div>
+            </div>
+          </div>
+
+          <div class="panel full">
+            <div class="panel-header">
+              <h3>Manager Features</h3>
+              <span class="pill neutral">SRS Coverage</span>
+            </div>
+            <div class="feature-grid">
+              <div class="feature-card"><div class="feature-icon">✅</div><h4>Promotion Approval</h4><p>Review and approve limited-time discounts.</p></div>
+              <div class="feature-card"><div class="feature-icon">📉</div><h4>Threshold Alerts</h4><p>Monitor low stock and reorder actions.</p></div>
+              <div class="feature-card"><div class="feature-icon">👥</div><h4>Employee Monitoring</h4><p>Check cashier performance and sales flow.</p></div>
+              <div class="feature-card"><div class="feature-icon">🧾</div><h4>Operational Reports</h4><p>Review store performance and notifications.</p></div>
+              <div class="feature-card"><div class="feature-icon">🔔</div><h4>Notifications</h4><p>Receive alerts for warehouse and staff updates.</p></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

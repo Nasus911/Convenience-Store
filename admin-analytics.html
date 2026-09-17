@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Analytics</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">C</div>
+          <div>
+            <h1>Local Market</h1>
+            <p>Admin Console</p>
+          </div>
+        </div>
+
+        <nav class="nav-panel">
+          <a class="nav-item" href="admin.html"><span class="dot admin"></span>Dashboard</a>
+          <a class="nav-item" href="admin-accounts.html"><span class="dot admin"></span>Accounts</a>
+          <a class="nav-item active" href="admin-analytics.html"><span class="dot admin"></span>Analytics</a>
+          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+        </nav>
+
+        <div class="help-box">
+          <h3>Help Desk</h3>
+          <p>Reporting support and analytics assistance.</p>
+          <button>Contact Support</button>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Analytics</p>
+            <h2>Admin Reports</h2>
+          </div>
+          <div class="topbar-actions">
+            <button class="primary-btn">Export PDF</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <div class="stat-card"><div class="stat-label">General Sales</div><div class="stat-value">$84.2K</div><span class="stat-trend">+12.4%</span></div>
+          <div class="stat-card"><div class="stat-label">Profit Margin</div><div class="stat-value">24.8%</div><span class="stat-trend">+1.2%</span></div>
+          <div class="stat-card"><div class="stat-label">Customers</div><div class="stat-value">5,642</div><span class="stat-trend">+9.7%</span></div>
+          <div class="stat-card"><div class="stat-label">Returning</div><div class="stat-value">64%</div><span class="stat-trend">+4.8%</span></div>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel large">
+            <div class="panel-header">
+              <h3>Monthly Revenue</h3>
+              <span class="pill success">Updated</span>
+            </div>
+            <div class="chart-wrap">
+              <div class="bars">
+                <div class="bar-col"><div class="bar" style="height: 40%"></div><span class="bar-label">Jan</span></div>
+                <div class="bar-col"><div class="bar" style="height: 55%"></div><span class="bar-label">Feb</span></div>
+                <div class="bar-col"><div class="bar" style="height: 50%"></div><span class="bar-label">Mar</span></div>
+                <div class="bar-col"><div class="bar" style="height: 75%"></div><span class="bar-label">Apr</span></div>
+                <div class="bar-col"><div class="bar" style="height: 68%"></div><span class="bar-label">May</span></div>
+                <div class="bar-col"><div class="bar" style="height: 90%"></div><span class="bar-label">Jun</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Top Branches</h3>
+              <span class="pill neutral">Rank</span>
+            </div>
+            <ul class="alerts-list">
+              <li><div class="alert-left"><span class="alert-icon success"></span><div><strong>Main Branch</strong><small>$32.6K sales</small></div></div><small>#1</small></li>
+              <li><div class="alert-left"><span class="alert-icon warning"></span><div><strong>North Wing</strong><small>$20.8K sales</small></div></div><small>#2</small></li>
+              <li><div class="alert-left"><span class="alert-icon danger"></span><div><strong>South Wing</strong><small>$17.2K sales</small></div></div><small>#3</small></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

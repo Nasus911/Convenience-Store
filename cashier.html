@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cashier POS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell pos-layout">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">C</div>
+          <div>
+            <h1>Local Market</h1>
+            <p>POS Terminal</p>
+          </div>
+        </div>
+
+        <nav class="nav-panel">
+          <a class="nav-item active" href="cashier.html"><span class="dot cashier"></span>POS</a>
+          <a class="nav-item" href="cashier-transactions.html"><span class="dot cashier"></span>Transactions</a>
+          <a class="nav-item" href="cashier-scanner.html"><span class="dot cashier"></span>Scanner</a>
+          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+        </nav>
+
+        <div class="help-box">
+          <h3>Help Desk</h3>
+          <p>POS support and payment troubleshooting.</p>
+          <button>Call Support</button>
+        </div>
+      </aside>
+
+      <main class="main-panel pos-main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Cashier access</p>
+            <h2>Point of Sale</h2>
+          </div>
+          <div class="topbar-actions">
+            <button class="primary-btn">Scan Item</button>
+          </div>
+        </header>
+
+        <section class="pos-grid">
+          <div class="panel pos-panel left-panel">
+            <div class="panel-header">
+              <h3>Current Sale</h3>
+              <span class="pill info">Queue 3</span>
+            </div>
+
+            <div class="sale-items">
+              <div class="sale-row"><span>Energy Drink</span><span>2 x $2.90</span><span>$5.80</span></div>
+              <div class="sale-row"><span>Chips</span><span>1 x $1.80</span><span>$1.80</span></div>
+              <div class="sale-row"><span>Instant Noodles</span><span>3 x $3.30</span><span>$9.90</span></div>
+              <div class="sale-row"><span>Mineral Water</span><span>2 x $1.60</span><span>$3.20</span></div>
+            </div>
+
+            <div class="totals">
+              <div class="total-row"><span>Subtotal</span><strong>$20.70</strong></div>
+              <div class="total-row"><span>VAT</span><strong>$1.45</strong></div>
+              <div class="total-row total"><span>Total</span><strong>$22.15</strong></div>
+            </div>
+
+            <div class="payment-actions">
+              <button class="primary-btn full">Pay Cash</button>
+              <button class="secondary-btn full">Pay via e-wallet</button>
+            </div>
+          </div>
+
+          <div class="panel pos-panel right-panel">
+            <div class="panel-header">
+              <h3>Product Scanner</h3>
+              <span class="pill success">Ready</span>
+            </div>
+
+            <div class="scanner-box">
+              <div class="scanner-line"></div>
+              <span>Scan barcode / QR</span>
+            </div>
+
+            <div class="quick-items">
+              <button>Energy Drink</button>
+              <button>Chips</button>
+              <button>Water</button>
+              <button>Soap</button>
+              <button>Milk</button>
+              <button>Rice</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -21,7 +21,7 @@
           <a class="nav-item active" href="cashier.html"><span class="dot cashier"></span>POS</a>
           <a class="nav-item" href="cashier-transactions.html"><span class="dot cashier"></span>Transactions</a>
           <a class="nav-item" href="cashier-scanner.html"><span class="dot cashier"></span>Scanner</a>
-          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+          <a class="nav-item" data-logout href="login.html"><span class="dot customer"></span>Log Out</a>
         </nav>
 
         <div class="help-box">
@@ -38,7 +38,7 @@
             <h2>Point of Sale</h2>
           </div>
           <div class="topbar-actions">
-            <button class="primary-btn">Scan Item</button>
+            <button class="primary-btn" data-action="void-request">Void Request</button>
           </div>
         </header>
 
@@ -49,22 +49,17 @@
               <span class="pill info">Queue 3</span>
             </div>
 
-            <div class="sale-items">
-              <div class="sale-row"><span>Energy Drink</span><span>2 x $2.90</span><span>$5.80</span></div>
-              <div class="sale-row"><span>Chips</span><span>1 x $1.80</span><span>$1.80</span></div>
-              <div class="sale-row"><span>Instant Noodles</span><span>3 x $3.30</span><span>$9.90</span></div>
-              <div class="sale-row"><span>Mineral Water</span><span>2 x $1.60</span><span>$3.20</span></div>
-            </div>
+            <div class="sale-items" data-cart-list></div>
 
             <div class="totals">
               <div class="total-row"><span>Subtotal</span><strong>$20.70</strong></div>
               <div class="total-row"><span>VAT</span><strong>$1.45</strong></div>
-              <div class="total-row total"><span>Total</span><strong>$22.15</strong></div>
+              <div class="total-row total"><span>Total</span><strong data-total>$0.00</strong></div>
             </div>
 
             <div class="payment-actions">
               <button class="primary-btn full">Pay Cash</button>
-              <button class="secondary-btn full">Pay via e-wallet</button>
+              <button class="secondary-btn full" data-action="online-payment">Pay via e-wallet</button>
             </div>
           </div>
 
@@ -80,16 +75,19 @@
             </div>
 
             <div class="quick-items">
-              <button>Energy Drink</button>
-              <button>Chips</button>
-              <button>Water</button>
-              <button>Soap</button>
-              <button>Milk</button>
-              <button>Rice</button>
+              <button data-quick-product="energy drink">Energy Drink</button>
+              <button data-quick-product="chips">Chips</button>
+              <button data-quick-product="water">Water</button>
+              <button data-quick-product="soap">Soap</button>
+              <button data-quick-product="milk">Milk</button>
+              <button data-quick-product="rice">Rice</button>
             </div>
+            <label class="search-label">Manual barcode / product search<input data-cashier-search type="search" placeholder="Type a product name or barcode"></label>
+            <div class="suggestions"><button data-cashier-suggestion data-product="energy drink">Energy Drink <small>9551001</small></button><button data-cashier-suggestion data-product="chips">Chips <small>9551002</small></button><button data-cashier-suggestion data-product="rice">Rice Pack <small>9551003</small></button></div>
           </div>
         </section>
       </main>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

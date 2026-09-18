@@ -29,6 +29,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 24px;
+  overflow-y: auto;
 }
 
 .landing-body {
@@ -136,6 +137,52 @@ button, input {
   display: grid;
   grid-template-columns: 280px 1fr;
 }
+
+.access-shell {
+  width: min(1080px, 100%);
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.access-intro, .login-card {
+  background: rgba(255,255,255,0.84);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 34px;
+  box-shadow: var(--shadow);
+}
+
+.access-intro { background: linear-gradient(145deg, #183745, #24605f); color: white; }
+.access-intro .eyebrow, .access-intro p { color: rgba(255,255,255,0.76); }
+.access-intro h1 { max-width: 520px; font-size: clamp(2.4rem, 5vw, 4.5rem); margin: 70px 0 16px; line-height: 1.02; }
+.access-intro > p:not(.eyebrow) { max-width: 430px; line-height: 1.6; }
+.access-note { margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.22); padding-top: 18px; display: grid; gap: 6px; }
+.access-note span { color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.5; }
+.login-card h2 { margin: 0; }
+.login-form, .modal-card { display: grid; gap: 14px; }
+.login-form label, .modal-card label, .search-label { display: grid; gap: 7px; color: var(--muted); font-size: 0.8rem; font-weight: 700; }
+.login-form input, .login-form select, .modal-card input, .modal-card select, .modal-card textarea, .search-label input { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 11px 12px; background: white; color: var(--text); }
+.modal-card textarea { min-height: 76px; resize: vertical; }
+.customer-access { border-top: 1px solid var(--line); margin-top: 22px; padding-top: 18px; display: grid; gap: 12px; }
+.customer-access small { display: block; color: var(--muted); margin-top: 4px; }
+.button-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.button-row > * { text-decoration: none; }
+.quiet-link { display: inline-block; margin-top: 18px; color: var(--muted); font-size: 0.8rem; }
+.guest-banner { background: #fff8e7; border: 1px solid #f3d98d; color: #916a13; border-radius: 12px; padding: 12px 14px; margin-bottom: 20px; }
+.panel-copy, .modal-copy { color: var(--muted); line-height: 1.6; }
+.stats-grid.compact { margin-top: 14px; margin-bottom: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.action-modal { border: none; border-radius: 18px; padding: 0; width: min(520px, calc(100% - 32px)); box-shadow: 0 24px 80px rgba(15,23,42,0.25); }
+.action-modal::backdrop { background: rgba(15,23,42,0.45); }
+.modal-card { padding: 22px; }
+.icon-btn { border: none; background: transparent; font-size: 1.5rem; cursor: pointer; color: var(--muted); }
+.qty-btn { border: 1px solid var(--line); background: white; border-radius: 6px; width: 24px; height: 24px; cursor: pointer; }
+.sale-row small, .suggestions small { display: block; color: var(--muted); font-size: 0.72rem; }
+.suggestions { display: grid; gap: 8px; margin-top: 12px; }
+.suggestions button { border: 1px solid var(--line); background: #f8fafc; border-radius: 10px; padding: 10px; text-align: left; cursor: pointer; }
+.empty-state { color: var(--muted); padding: 12px 0; }
+.status-tag.neutral { background: #edf2f7; color: var(--muted); }
 
 .sidebar {
   background: linear-gradient(180deg, var(--sidebar) 0%, var(--sidebar-soft) 100%);
@@ -685,6 +732,9 @@ button, input {
 }
 
 @media (max-width: 980px) {
+  .access-shell { grid-template-columns: 1fr; }
+  .access-intro h1 { margin-top: 20px; }
+  .access-note { margin-top: 32px; }
   .app-shell {
     grid-template-columns: 1fr;
   }

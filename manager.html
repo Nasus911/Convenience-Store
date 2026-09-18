@@ -21,7 +21,10 @@
           <a class="nav-item active" href="manager.html"><span class="dot manager"></span>Dashboard</a>
           <a class="nav-item" href="manager-sales.html"><span class="dot manager"></span>Sales</a>
           <a class="nav-item" href="manager-promotions.html"><span class="dot manager"></span>Promos</a>
-          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+          <a class="nav-item" href="#requests"><span class="dot manager"></span>Requests</a>
+          <a class="nav-item" href="#staff"><span class="dot manager"></span>Staff Schedule</a>
+          <a class="nav-item" href="#aisles"><span class="dot manager"></span>Product Aisles</a>
+          <a class="nav-item" data-logout href="login.html"><span class="dot customer"></span>Log Out</a>
         </nav>
 
         <div class="help-box">
@@ -42,7 +45,7 @@
               <span>⌕</span>
               <input type="text" placeholder="Search sales or alerts" />
             </div>
-            <button class="primary-btn">Approve Promo</button>
+            <button class="primary-btn" data-action="add-promo">Add Promo</button>
           </div>
         </header>
 
@@ -133,8 +136,13 @@
               <div class="feature-card"><div class="feature-icon">🔔</div><h4>Notifications</h4><p>Receive alerts for warehouse and staff updates.</p></div>
             </div>
           </div>
+
+          <div class="panel full" id="requests"><div class="panel-header"><h3>Void Requests</h3><span class="pill warning">Manager review</span></div><table class="inventory-table"><thead><tr><th>Receipt</th><th>Requested by</th><th>Reason</th><th>Action</th></tr></thead><tbody><tr><td>#3018</td><td>Cashier 03</td><td>Duplicate scan</td><td><button class="secondary-btn">Hold</button> <button class="primary-btn">Accept</button></td></tr></tbody></table></div>
+          <div class="panel" id="staff"><div class="panel-header"><h3>Staff Schedule</h3><span class="pill info">Today</span></div><div class="transactions"><div class="transaction-item"><div><strong>Leo Reyes</strong><small>07:00 - 15:00</small></div><span class="status-tag good">On shift</span></div><div class="transaction-item"><div><strong>Patricia Gomez</strong><small>15:00 - 23:00</small></div><span class="status-tag neutral">Scheduled</span></div></div></div>
+          <div class="panel" id="aisles"><div class="panel-header"><h3>Product Aisles</h3><span class="pill info">Store map</span></div><table class="inventory-table"><tbody><tr><td>Energy drinks</td><td>Aisle 2</td></tr><tr><td>Snacks</td><td>Aisle 3</td></tr><tr><td>Groceries</td><td>Aisle 5</td></tr></tbody></table></div>
         </section>
       </main>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Account</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="landing-body">
+    <main class="access-shell customer-access-shell">
+      <section class="access-intro customer-intro">
+        <p class="eyebrow">Customer Portal</p>
+        <h1>Shop your way.</h1>
+        <p>Save orders, earn points, find aisle locations, and check out with your account.</p>
+        <div class="access-note"><strong>Guest checkout stays available</strong><span>You can continue without an account, but guest purchases do not earn loyalty points.</span></div>
+      </section>
+      <section class="login-card">
+        <div class="panel-header"><div><p class="eyebrow">Customer account</p><h2>Sign in</h2></div><span class="pill success">Loyalty enabled</span></div>
+        <form class="login-form" data-customer-login-form>
+          <label>Email or phone<input name="identity" required placeholder="you@example.com"></label>
+          <label>Password<input name="password" type="password" required placeholder="Enter password"></label>
+          <button class="primary-btn full" type="submit">Customer Log In</button>
+        </form>
+        <div class="customer-access"><strong>New customer?</strong><button class="secondary-btn" data-action="signup">Create an account</button><a class="quiet-link" href="customer.html?mode=guest">Continue as Guest</a></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

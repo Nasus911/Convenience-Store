@@ -6,7 +6,7 @@
     <title>Customer Portal</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-customer-page="true">
     <div class="app-shell">
       <aside class="sidebar">
         <div class="brand-block">
@@ -21,7 +21,9 @@
           <a class="nav-item active" href="customer.html"><span class="dot customer"></span>Home</a>
           <a class="nav-item" href="customer-orders.html"><span class="dot customer"></span>Orders</a>
           <a class="nav-item" href="customer-loyalty.html"><span class="dot customer"></span>Loyalty</a>
-          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+          <a class="nav-item" href="customer.html?mode=guest"><span class="dot customer"></span>Guest Home</a>
+          <a class="nav-item" href="customer-orders.html"><span class="dot customer"></span>Orders</a>
+          <a class="nav-item" data-logout href="login.html"><span class="dot customer"></span>Log Out</a>
         </nav>
 
         <div class="help-box">
@@ -40,14 +42,16 @@
           <div class="topbar-actions">
             <div class="search-box">
               <span>⌕</span>
-              <input type="text" placeholder="Search products" />
+              <input data-product-search type="text" placeholder="Search products or aisle" />
             </div>
-            <button class="primary-btn">Order Now</button>
+            <a class="secondary-btn" href="customer-auth.html">Sign In</a><button class="primary-btn" data-action="signup">Sign Up</button>
           </div>
         </header>
 
+        <div class="guest-banner" data-guest-notice>Guest mode: browse, add to cart, and check out. Create an account to earn loyalty points.</div>
+
         <section class="stats-grid">
-          <div class="stat-card"><div class="stat-label">Loyalty Points</div><div class="stat-value">8,440</div><span class="stat-trend">+320</span></div>
+          <div class="stat-card" data-account-only><div class="stat-label">Loyalty Points</div><div class="stat-value">8,440</div><span class="stat-trend">+320</span></div>
           <div class="stat-card"><div class="stat-label">Saved Orders</div><div class="stat-value">34</div><span class="stat-trend">+6</span></div>
           <div class="stat-card"><div class="stat-label">Reservations</div><div class="stat-value">12</div><span class="stat-trend">+3</span></div>
           <div class="stat-card"><div class="stat-label">Redeemed</div><div class="stat-value">522</div><span class="stat-trend">+18%</span></div>
@@ -60,11 +64,11 @@
               <span class="pill success">Trending</span>
             </div>
             <div class="feature-grid customer-products">
-              <div class="feature-card"><div class="feature-icon">🥤</div><h4>Organic Juice</h4><p>$5.50</p></div>
-              <div class="feature-card"><div class="feature-icon">🍞</div><h4>Fresh Bread</h4><p>$4.20</p></div>
-              <div class="feature-card"><div class="feature-icon">☕</div><h4>Coffee Mix</h4><p>$8.40</p></div>
-              <div class="feature-card"><div class="feature-icon">🥗</div><h4>Snack Combo</h4><p>$14.90</p></div>
-              <div class="feature-card"><div class="feature-icon">🍋</div><h4>Fruit Pack</h4><p>$6.70</p></div>
+              <div class="feature-card" data-product-card><div class="feature-icon">🥤</div><h4>Organic Juice</h4><p>$5.50 · Aisle 1</p><button class="secondary-btn" data-product="water">Add to cart</button></div>
+              <div class="feature-card" data-product-card><div class="feature-icon">🍞</div><h4>Fresh Bread</h4><p>$4.20 · Aisle 1</p><button class="secondary-btn" data-product="milk">Add to cart</button></div>
+              <div class="feature-card" data-product-card><div class="feature-icon">☕</div><h4>Coffee Mix</h4><p>$8.40 · Aisle 2</p><button class="secondary-btn" data-product="energy drink">Add to cart</button></div>
+              <div class="feature-card" data-product-card><div class="feature-icon">🥗</div><h4>Snack Combo</h4><p>20% off · Aisle 3</p><button class="secondary-btn" data-product="chips">Add to cart</button></div>
+              <div class="feature-card" data-product-card><div class="feature-icon">🍋</div><h4>Fruit Pack</h4><p>$6.70 · Aisle 1</p><button class="secondary-btn" data-product="water">Add to cart</button></div>
             </div>
           </div>
 
@@ -79,6 +83,10 @@
               <li><div class="alert-left"><span class="alert-icon success"></span><div><strong>Order ready</strong><small>Your pickup order is prepared</small></div></div><small>Today</small></li>
             </ul>
           </div>
+
+          <div class="panel full"><div class="panel-header"><h3>Shopping Cart</h3><span class="pill info">Checkout</span></div><div data-cart-list></div><div class="total-row total"><span>Total</span><strong data-total>$0.00</strong></div><button class="primary-btn" data-action="checkout">Checkout</button></div>
+
+          <div class="panel full" id="list-search"><div class="panel-header"><h3>Shopping List Capture</h3><span class="pill info">Find products</span></div><p class="panel-copy">Upload a handwritten list photo or type the list below. The prototype will match known products and show their aisles.</p><label class="search-label">List photo<input type="file" accept="image/*" data-list-photo></label><textarea class="list-input" data-list-text placeholder="Example: chips, rice, soap"></textarea><button class="secondary-btn" data-action="find-list">Find items and aisles</button><div class="list-result" data-list-result></div></div>
 
           <div class="panel large">
             <div class="panel-header">
@@ -116,5 +124,6 @@
         </section>
       </main>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

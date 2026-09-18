@@ -21,7 +21,8 @@
           <a class="nav-item" href="manager.html"><span class="dot manager"></span>Dashboard</a>
           <a class="nav-item" href="manager-sales.html"><span class="dot manager"></span>Sales</a>
           <a class="nav-item active" href="manager-promotions.html"><span class="dot manager"></span>Promos</a>
-          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+          <a class="nav-item" href="manager.html#requests"><span class="dot manager"></span>Requests</a>
+          <a class="nav-item" data-logout href="login.html"><span class="dot customer"></span>Log Out</a>
         </nav>
 
         <div class="help-box">
@@ -35,10 +36,10 @@
         <header class="topbar">
           <div>
             <p class="eyebrow">Promotions</p>
-            <h2>Promotion Approval</h2>
+            <h2>Promotion Management</h2>
           </div>
           <div class="topbar-actions">
-            <button class="primary-btn">New Promo</button>
+            <button class="primary-btn" data-action="add-promo">Add Promo</button>
           </div>
         </header>
 
@@ -67,5 +68,6 @@
         </section>
       </main>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Market Sign In</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="landing-body">
+    <main class="access-shell">
+      <section class="access-intro">
+        <p class="eyebrow">Local Market System</p>
+        <h1>Sign in to your workspace.</h1>
+        <p>Role-based access for store operations, checkout, and customer ordering.</p>
+        <div class="access-note"><strong>Prototype access</strong><span>Choose a role to preview its workspace. Authentication can be connected to the backend later.</span></div>
+      </section>
+      <section class="login-card">
+        <div class="panel-header"><div><p class="eyebrow">Account login</p><h2>Welcome back</h2></div><span class="pill success">Secure</span></div>
+        <form class="login-form" data-login-form>
+          <label>Account type<select name="role"><option value="admin">Admin account</option><option value="manager">Manager account</option><option value="cashier">Cashier account</option></select></label>
+          <label>Email or username<input name="identity" type="text" placeholder="name@localmarket.test" required /></label>
+          <label>Password<input name="password" type="password" placeholder="Enter password" required /></label>
+          <button class="primary-btn full" type="submit">Log In</button>
+        </form>
+        <div class="customer-access">
+          <div><strong>Customer access</strong><small>Browse without an account or unlock loyalty points.</small></div>
+          <div class="button-row"><a class="secondary-btn" href="customer.html?mode=guest">Continue as Guest</a><a class="primary-btn" href="customer-auth.html">Customer Log In</a></div>
+        </div>
+        <a class="quiet-link" href="index.html">View role overview</a>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

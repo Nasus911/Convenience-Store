@@ -20,8 +20,9 @@
         <nav class="nav-panel">
           <a class="nav-item active" href="admin.html"><span class="dot admin"></span>Dashboard</a>
           <a class="nav-item" href="admin-accounts.html"><span class="dot admin"></span>Accounts</a>
-          <a class="nav-item" href="admin-analytics.html"><span class="dot admin"></span>Analytics</a>
-          <a class="nav-item" href="index.html"><span class="dot customer"></span>Back to Roles</a>
+          <a class="nav-item" href="#analytics"><span class="dot admin"></span>Analytics</a>
+          <a class="nav-item" href="#audit"><span class="dot admin"></span>Audit Trail</a>
+          <a class="nav-item" data-logout href="login.html"><span class="dot customer"></span>Log Out</a>
         </nav>
 
         <div class="help-box">
@@ -42,7 +43,7 @@
               <span>⌕</span>
               <input type="text" placeholder="Search account or report" />
             </div>
-            <button class="primary-btn">Create Admin</button>
+            <button class="primary-btn" data-action="create-account">Create New Account</button>
           </div>
         </header>
 
@@ -133,8 +134,20 @@
               <div class="feature-card"><div class="feature-icon">🧾</div><h4>Audit Trails</h4><p>Track transaction logs and cashier activity.</p></div>
             </div>
           </div>
+
+          <div class="panel full" id="analytics">
+            <div class="panel-header"><h3>Analytics</h3><span class="pill info">Dashboard feature</span></div>
+            <p class="panel-copy">Sales analytics lives inside the dashboard. Detailed reporting rules can be added here when the analytics specification is ready.</p>
+            <div class="stats-grid compact"><div class="stat-card"><div class="stat-label">Weekly Revenue</div><div class="stat-value">$84.2K</div></div><div class="stat-card"><div class="stat-label">Top Branch</div><div class="stat-value">Main</div></div><div class="stat-card"><div class="stat-label">Conversion</div><div class="stat-value">68%</div></div></div>
+          </div>
+
+          <div class="panel full" id="audit">
+            <div class="panel-header"><h3>Audit Trail</h3><span class="pill neutral">Manager and cashier activity</span></div>
+            <div class="audit-list"><div class="transaction-item"><div><strong>Cashier sale recorded</strong><small>Receipt #3021, POS terminal 02</small></div><small>Today</small></div><div class="transaction-item"><div><strong>Manager promo published</strong><small>Snack Pack Deal, 20% off</small></div><small>Today</small></div><div class="transaction-item"><div><strong>Void request submitted</strong><small>Receipt #3018 awaiting review</small></div><small>Yesterday</small></div></div>
+          </div>
         </section>
       </main>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

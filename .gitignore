@@ -1,9 +1,0 @@
-# Local development
-.vscode/
-*.log
-.DS_Store
-Thumbs.db
-
-# Temporary browser and editor files
-*.tmp
-*.bak

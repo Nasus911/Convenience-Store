@@ -19,36 +19,37 @@
 
 html, body {
   margin: 0;
-  min-height: 100%;
+  width: 100%;
+  min-height: 100vh;
   background: linear-gradient(135deg, #edf3f8 0%, #eaf1f8 100%);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  padding: 24px;
+  display: block;
+  padding: 0;
   overflow-y: auto;
 }
 
 .landing-body {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
+  display: block;
 }
 
-button, input {
+button, input, select, textarea {
   font: inherit;
 }
 
 .landing-shell {
-  width: min(1100px, 100%);
+  width: 100%;
+  min-height: 100vh;
   background: rgba(255,255,255,0.72);
-  border: 1px solid rgba(15,23,42,0.08);
-  border-radius: 24px;
+  border: none;
+  border-radius: 0;
   padding: 32px;
-  box-shadow: var(--shadow);
+  box-shadow: none;
   backdrop-filter: blur(10px);
 }
 
@@ -126,20 +127,21 @@ button, input {
 }
 
 .app-shell {
-  width: 1280px;
-  max-width: 100%;
-  min-height: 900px;
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
   background: var(--bg);
-  border: 1px solid rgba(15, 23, 42, 0.04);
-  border-radius: 22px;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: none;
   display: grid;
   grid-template-columns: 280px 1fr;
 }
 
 .access-shell {
-  width: min(1080px, 100%);
+  width: 100%;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 0.9fr;
   gap: 22px;
@@ -735,12 +737,20 @@ button, input {
   .access-shell { grid-template-columns: 1fr; }
   .access-intro h1 { margin-top: 20px; }
   .access-note { margin-top: 32px; }
+
   .app-shell {
-    grid-template-columns: 1fr;
+    display: block;
+    min-height: 100vh;
   }
 
   .sidebar {
     border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 18px 16px;
+  }
+
+  .nav-panel {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .stats-grid {
@@ -757,13 +767,54 @@ button, input {
 }
 
 @media (max-width: 560px) {
-  body { padding: 12px; }
+  body { padding: 0; }
   .main-panel { padding: 16px; }
-  .topbar { flex-direction: column; align-items: flex-start; }
-  .topbar-actions { width: 100%; }
-  .search-box { flex: 1; min-width: 0; }
-  .stats-grid,
-  .feature-grid {
+  .access-intro, .login-card, .panel {
+    padding: 18px 16px;
+  }
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .topbar-actions {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-box {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+  }
+  .nav-panel {
     grid-template-columns: 1fr;
+  }
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .button-row > * {
+    width: 100%;
+    text-align: center;
+  }
+  .stats-grid,
+  .feature-grid,
+  .role-grid,
+  .access-shell,
+  .pos-grid,
+  .quick-items {
+    grid-template-columns: 1fr;
+  }
+  .inventory-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .transaction-item,
+  .alerts-list li {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
